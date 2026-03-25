@@ -106,15 +106,24 @@
   }
   .btn-ghost:hover { color: var(--purple-deep); }
 
-  /* CLIENTS */
-  .logos-grid { display: flex; flex-wrap: wrap; gap: 10px; }
-  .logo-chip {
-    font-size: 12px; font-weight: 600; color: var(--ink-mid);
-    padding: 7px 16px; border: 1px solid var(--rule);
-    border-radius: 2px; background: var(--surface);
-    transition: border-color 0.2s, color 0.2s; cursor: default;
+ /* LOGO CARDS */
+  .logos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .logo-card {
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 6px;
+    padding: 18px 20px; display: flex; flex-direction: column; gap: 12px;
+    transition: border-color 0.2s, box-shadow 0.2s;
   }
-  .logo-chip:hover { border-color: var(--purple); color: var(--ink); }
+  .logo-card:hover { border-color: var(--purple); box-shadow: 0 2px 12px rgba(191,95,255,0.08); }
+  .logo-card-top { display: flex; align-items: center; gap: 12px; }
+  .logo-card img { width: 28px; height: 28px; object-fit: contain; border-radius: 5px; flex-shrink: 0; }
+  .logo-card-name { font-size: 13px; font-weight: 700; color: var(--ink); letter-spacing: -0.2px; }
+  .logo-card-meta { display: flex; gap: 6px; flex-wrap: wrap; }
+  .meta-tag {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.4px;
+    padding: 3px 8px; border-radius: 20px;
+  }
+  .meta-role { background: #f3ecff; color: #7B1FA2; }
+  .meta-stage { background: #f0f0f0; color: #555; }
 
   /* ABOUT — two col: left = photo stack, right = text */
   .about-grid {
